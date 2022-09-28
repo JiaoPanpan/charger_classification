@@ -4,4 +4,5 @@
   ├── train.py: 训练脚本
   ├── predict.py: 单张图像预测脚本
   └── batch_predict.py: 批量图像预测脚本
+  |__ test.py 对测试集进行测试
 ```
