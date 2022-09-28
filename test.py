@@ -55,7 +55,7 @@ def main():
     print("using {} images for testing.".format(test_num))
     
     net = resnet34(num_classes=3).to(device)
-     # load model weights
+     # load model weights  加载模型参数
     weights_path = "./resNet34.pth"
     assert os.path.exists(weights_path), f"file: '{weights_path}' dose not exist."
     net.load_state_dict(torch.load(weights_path, map_location=device))
@@ -63,7 +63,7 @@ def main():
     # prediction
     net.eval()
     batch_size = 8  # 每次预测时将多少张图片打包成一个batch
-                                                           loss)
+                                                         #  loss)
     classes = ('fire', 'other', 'person')
     correct_pred = {classname: 0 for classname in classes}
     total_pred = {classname: 0 for classname in classes}
